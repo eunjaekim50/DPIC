@@ -2,3 +2,7 @@
 .env
 *.key
 _club-archive/
+
+# lecture-notes skill: local transcription venv (rebuilt by scripts/setup.sh) and archived audio
+.claude/skills/lecture-notes/scripts/.venv/
+sources/lectures/*.m4a
