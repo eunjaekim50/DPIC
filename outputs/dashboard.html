@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>나의 투자 작업실 — 대시보드</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+  :root {
+    color-scheme: light dark;
+    --bg: #ffffff;
+    --fg: #1a1a1a;
+    --muted: #6b6b6b;
+    --border: #e2e2e2;
+    --accent: #2f5233;
+    --row-alt: #f7f7f7;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #14161a;
+      --fg: #eaeaea;
+      --muted: #9a9a9a;
+      --border: #2c2f36;
+      --accent: #7fbf8a;
+      --row-alt: #1b1e24;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    padding: 2rem 1.5rem 4rem;
+    background: var(--bg);
+    color: var(--fg);
+    font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;
+    line-height: 1.6;
+  }
+  .wrap { max-width: 860px; margin: 0 auto; }
+  h1 {
+    font-size: 1.4rem;
+    margin-bottom: 0.2rem;
+  }
+  .subtitle {
+    color: var(--muted);
+    font-size: 0.9rem;
+    margin-bottom: 2.5rem;
+  }
+  section { margin-bottom: 3rem; }
+  h2 {
+    font-size: 1.05rem;
+    border-bottom: 2px solid var(--accent);
+    padding-bottom: 0.4rem;
+    margin-bottom: 1rem;
+  }
+  .declaration {
+    background: var(--row-alt);
+    border-left: 3px solid var(--accent);
+    padding: 1rem 1.2rem;
+    border-radius: 4px;
+    font-size: 0.95rem;
+  }
+  .declaration .sign {
+    display: block;
+    margin-top: 0.7rem;
+    color: var(--muted);
+    font-size: 0.82rem;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.88rem;
+  }
+  th, td {
+    text-align: left;
+    padding: 0.55rem 0.7rem;
+    border-bottom: 1px solid var(--border);
+    vertical-align: top;
+  }
+  th {
+    color: var(--muted);
+    font-weight: 600;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+  }
+  tr:nth-child(even) td { background: var(--row-alt); }
+  .empty-row td { color: var(--muted); font-style: italic; }
+  .note {
+    color: var(--muted);
+    font-size: 0.82rem;
+    margin-top: 0.6rem;
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>나의 투자 작업실</h1>
+  <p class="subtitle">context.md · journey.md 스냅샷 — 2026-07-30 기준 (실시간 연동 아님, 최신 내용은 다시 만들어 달라고 요청)</p>
+
+  <section>
+    <h2>지금 보고 있는 것</h2>
+    <table>
+      <thead>
+        <tr><th>대상</th><th>왜 보는가</th><th>상태</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>VC vs P/E (커리어 방향 비교)</td>
+          <td>career-check로 두 산업 열정·지속가능성 확인</td>
+          <td>(2026-07-23) 판단: 현재 VC 쪽에 관심이 더 가지만, P/E 쪽 정보가 부족해 커리어를 좁히기엔 이르다 — 이유: PE는 열정은 확인됐으나 지속가능성 문항 다수가 정보부족으로 미확정, VC는 열정·지속가능성이 더 확인된 편. 멘토링·강연으로 PE 쪽 공부를 더 채워야 함</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section>
+    <h2>나의 선언 (Week 1 과제)</h2>
+    <div class="declaration">
+      클럽이 끝나는 날, 나는 VC 안에서 내가 하고 싶은 역할(직무)을 1~2개로 좁힌 사람이 되어 있다. 그것을 위해 이 5주 동안 강연·산업 투어와 모의투자를 따라가며, 창업자를 판별하는 기준(예: 강연에서 나온 '여우형/고슴도치형' 구분)이 실제 심사에서 어떤 질문과 절차로 쓰이는지 메커니즘을 직접 확인한다. (SBVA 강연에서 나온 '소비자 편의성을 위한 기업 투자'는 아직 확정하지 않은 탐색 후보로 함께 열어둔다.)
+      <span class="sign">— 2026-07-14, 미카 (2026-07-15 /clarify로 선명화, 2026-07-23 /clarify로 재선명화)</span>
+    </div>
+  </section>
+
+  <section>
+    <h2>나의 진행 상태</h2>
+    <table>
+      <thead>
+        <tr><th>주차</th><th>한 일</th><th>남긴 것</th><th>나의 보강 (다음 세션 전까지)</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1주차</td>
+          <td>터미널·CLI 복습 퀴즈, weeks/ 강의안 서랍 짓기, curriculum.md 읽기, 모호/명확 위임 비교, 나에 대한 질문 3개 답변, plan mode 연습</td>
+          <td>weeks/week-01~05 폴더 · 투자 경험 거의 없음 · 목표는 특정 산업(VC/PE/증권 등) 깊이 이해 · 갭은 산업·메커니즘 지식</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>2주차 (예습)</td>
+          <td>commit·push 인증 문제 해결 후 실습, 알토스벤처스(VC) 연습 조사(돈의 흐름·unknowns·소스 라벨링), context.md 첫 시선 등록, 7기능 지도 미리보기, /clarify로 선언 재선명화, source-log 스킬 제작·실행</td>
+          <td>outputs/week2-prep.md · context.md에 알토스벤처스 시선 등록 · context.md 소스 이력에 인텔리안파트너스 강연 1건 추가 · .claude/skills/source-log</td>
+          <td>source-log를 다른 소스(예: SBVA 강의)에도 2~3번 더 써서 소스 이력 표 채우기, 오늘 나온 다음 확인(벤처펀드 수익분포 연구 대조) 실제로 해보기</td>
+        </tr>
+        <tr class="empty-row"><td>3주차</td><td colspan="3">아직 없음</td></tr>
+        <tr class="empty-row"><td>4주차</td><td colspan="3">아직 없음</td></tr>
+        <tr class="empty-row"><td>5주차</td><td colspan="3">아직 없음</td></tr>
+        <tr class="empty-row"><td>캠프</td><td colspan="3">아직 없음</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section>
+    <h2>관심·진로 신호 로그</h2>
+    <table>
+      <thead>
+        <tr><th>날짜</th><th>세션/노트</th><th>열정</th><th>지속가능성</th><th>진로 인사이트</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>2026-07-29</td>
+          <td>안재균-채권기초교육및투자전략</td>
+          <td>아니다(내용이 기술적·건조해 흥미 안 생김) + 아니다(의사결정 방식도 나와 안 맞음)</td>
+          <td>아니다(흥미 없으면 훈련이 안 된다고 느낌) + 모르겠다(경쟁강도·진입장벽, 라이프스타일 정보 부족)</td>
+          <td>기술적·건조한 내용이라 흥미가 안 생겼고, 흥미 없으면 훈련도 어렵다고 느낌 — 구조(경쟁강도·라이프스타일) 쪽은 아직 정보 부족으로 판단 보류</td>
+        </tr>
+        <tr>
+          <td>2026-07-22</td>
+          <td>이종원-PE의기업가치평가</td>
+          <td>그렇다(산업/발굴개념 자체는 흥미) + 모르겠다(실제 하루는 못 들음)</td>
+          <td>모르겠다(가치평가·재무모델링 정보 부족) + 모르겠다(경쟁강도·진입장벽·라이프스타일 정보 부족)</td>
+          <td>개념은 끌리나 실무·역량·구조 정보 부족으로 지속가능성 판단 보류</td>
+        </tr>
+        <tr>
+          <td>2026-07-15</td>
+          <td>최지현·손호준-VC딜소싱과투자철학(합본)</td>
+          <td>그렇다(산업 흥미) + 그렇다(탐구·네트워킹 재미)</td>
+          <td>그렇다(판단력·네트워크는 훈련 가능) + 모르겠다(파레토 수익구조·베팅실패 리스크 두려움)</td>
+          <td>흥미·역량훈련은 긍정적이나 극단적 리스크구조에 대한 두려움이 걸림돌</td>
+        </tr>
+      </tbody>
+    </table>
+    <p class="note">모든 수치·판단 출처: context.md / journey.md (이 워크스페이스 소유자 본인 기록)</p>
+  </section>
+</div>
+</body>
+</html>
